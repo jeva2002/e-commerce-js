@@ -1,0 +1,273 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "price": "43.61",
+      "product": "Sauce - Hoisin",
+      "weight": 48,
+      "type": "sauces",
+      "img": "https://i5.walmartimages.com/asr/a290c796-2ebc-4af8-bfce-08e72004f071_1.c6c65f334d8c5ffcde66ff33de38d551.jpeg"
+    },
+    {
+      "id": 2,
+      "price": "14.40",
+      "product": "Cocoa Powder - Natural",
+      "weight": 40,
+      "type": "food",
+      "img": "https://i5.walmartimages.com/asr/1205e2ba-53de-49b1-97c7-c2ee24bf5760.e8c5a7952d473794a6025dd6f3de458d.jpeg"
+    },
+    {
+      "id": 3,
+      "price": "17.78",
+      "product": "Peas - Frozen",
+      "weight": 34,
+      "type": "vegetablesFruit",
+      "img": "https://5.imimg.com/data5/TR/OE/MY-60287499/frozen-green-peas-500x500.jpg"
+    },
+    {
+      "id": 4,
+      "price": "37.25",
+      "product": "Mustard - Dijon",
+      "weight": 90,
+      "type": "sauces",
+      "img": "https://www.webstaurantstore.com/images/products/extra_large/446687/1645887.jpg"
+    },
+    {
+      "id": 5,
+      "price": "0.51",
+      "product": "Mayonnaise",
+      "weight": 98,
+      "type": "sauces",
+      "img": "http://2massociates.biz/wp-content/uploads/2019/05/F11B49D6-EF19-4662-B9F0-C9344108F38F.jpeg"
+    },
+    {
+      "id": 6,
+      "price": "8.20",
+      "product": "Banana",
+      "weight": 40,
+      "type": "vegetablesFruit",
+      "img": "http://2.bp.blogspot.com/_9jELGhDpjuA/TCtjmXjDp6I/AAAAAAAABCQ/OAQfEv-5RsQ/s1600/bananas.jpg"
+    },
+    {
+      "id": 7,
+      "price": "5.63",
+      "product": "Tea - Lemon Green Tea",
+      "weight": 24,
+      "type": "drinks",
+      "img": "https://metrocolombiafood.vteximg.com.br/arquivos/ids/157755-1000-1000/7702090031294-1.jpg?v=636670246957830000"
+    },
+    {
+      "id": 8,
+      "price": "41.43",
+      "product": "Apple",
+      "weight": 32,
+      "type": "vegetablesFruit",
+      "img": "https://vixark.b-cdn.net/lp-i-p-g/manzana-roja.jpg"
+    },
+    {
+      "id": 9,
+      "price": "40.86",
+      "product": "Beer - Muskoka Cream Ale",
+      "weight": 27,
+      "type": "drinks",
+      "img": "https://d3q8a6ezjkqgxu.cloudfront.net/media/catalog/product/cache/3f15339c1db7f7a94f5f1d1b7cf2eabf/7/8/78409613.jpg"
+    },
+    {
+      "id": 10,
+      "price": "15.69",
+      "product": "White Onion",
+      "weight": 17,
+      "type": "vegetablesFruit",
+      "img": "https://cdn.shopify.com/s/files/1/0492/2458/1274/products/db50b41a-5198-4aa5-bdb3-189ac7dbe535_700x700.png?v=1622197667"
+    },
+    {
+      "id": 11,
+      "price": "38.39",
+      "product": "Lamb - Sausage Casings",
+      "weight": 48,
+      "type": "meats",
+      "img": "https://static.wixstatic.com/media/91fc24_1b4054e8b82b46fb9a59568fe6e70e55~mv2.png/v1/fill/w_498,h_498,al_c,usm_0.66_1.00_0.01/91fc24_1b4054e8b82b46fb9a59568fe6e70e55~mv2.png"
+    },
+    {
+      "id": 12,
+      "price": "29.71",
+      "product": "Cheese - Grie Des Champ",
+      "weight": 45,
+      "type": "breakfast",
+      "img": "https://mercaldas.vteximg.com.br/arquivos/ids/187333-1300-1300/Queso-COLANTA-tajado-mozzarella-x250-g.jpg?v=637141070958470000"
+    },
+    {
+      "id": 13,
+      "price": "4.87",
+      "product": "Juguito",
+      "weight": 79,
+      "type": "drinks",
+      "img": "https://cdn.shopify.com/s/files/1/0492/2458/1274/products/supermercados_la_vaquita_supervaquita_jugo_hit_500ml_frutas_tropicales_bebidas_liquidas_1024x1024.jpg?v=1620489472"
+    },
+    {
+      "id": 14,
+      "price": "2.79",
+      "product": "Cheese cheddar",
+      "weight": 4,
+      "type": "breakfast",
+      "img": "https://i5.walmartimages.com/asr/087e7bcf-76b7-46ef-bd33-f7385d0dbc35.50eaa96a3b45fe4ffc63da01eb3b86cf.jpeg"
+    },
+    {
+      "id": 15,
+      "price": "6.73",
+      "product": "Corn Kernels - Frozen",
+      "weight": 40,
+      "type": "vegetablesFruit",
+      "img": "http://cdn.shopify.com/s/files/1/0016/0032/3635/products/Frozen_Sweet_Corn_500g_PackShot_1024x1024.jpg?v=1561739401"
+    },
+    {
+      "id": 16,
+      "price": "30.18",
+      "product": "Gatorade - Xfactor Berry",
+      "weight": 10,
+      "type": "drinks",
+      "img": "https://i5.walmartimages.com/asr/734d4f72-958b-4868-aec2-ed5477950edb_1.a994e22836c8a7a336f3bebbb263b5a5.jpeg"
+    },
+    {
+      "id": 17,
+      "price": "35.24",
+      "product": "Kellogs Raisan Bran Bars",
+      "weight": 17,
+      "type": "breakfast",
+      "img": "https://i5.walmartimages.com/asr/8134c246-a760-4e13-af5e-9f9f5298b22f_1.cd2efb84ce7987a483c5fdf37c2c53e7.jpeg"
+    },
+    {
+      "id": 18,
+      "price": "18.79",
+      "product": "Cloro",
+      "weight": 3,
+      "type": "cleanliness",
+      "img": "https://walmartcr.vtexassets.com/arquivos/ids/221595/Cloro-Suli-Galon-3785ml-1-26799.jpg?v=637626934769130000"
+    },
+    {
+      "id": 19,
+      "price": "49.56",
+      "product": "Soap",
+      "weight": 92,
+      "type": "cleanliness",
+      "img": "https://www.4sgm.com/assets/Image/Product/detailsbig/49048.jpg"
+    },
+    {
+      "id": 20,
+      "price": "7.22",
+      "product": "shampoo",
+      "weight": 75,
+      "type": "cleanliness",
+      "img": "http://cdn.ecommercedns.uk/files/0/202650/0/4739060/shampoo-250ml.png"
+    },
+    {
+      "id": 21,
+      "price": "20.38",
+      "product": "Paper",
+      "weight": 84,
+      "type": "cleanliness",
+      "img": "https://www.freepngimg.com/thumb/machine/51622-8-toilet-paper-free-transparent-image-hd.png"
+    },
+    {
+      "id": 22,
+      "price": "34.67",
+      "product": "Melon - Watermelon, Seedless",
+      "weight": 19,
+      "type": "vegetablesFruit",
+      "img": "http://www.bestherbalhealth.com/wp-content/uploads/2014/07/Melon.jpg"
+    },
+    {
+      "id": 23,
+      "price": "4.66",
+      "product": "Bar - Sweet And Salty Chocolate",
+      "weight": 39,
+      "type": "breakfast",
+      "img": "https://yaperito.com/shop/wp-content/uploads/2020/09/jet-chocolate-468g.jpg"
+    },
+    {
+      "id": 24,
+      "price": "28.55",
+      "product": "Cake",
+      "weight": 53,
+      "type": "breakfast",
+      "img": "https://thundersbakery.ie/wp-content/uploads/2020/10/10-Chocolate-Buttercream.jpg"
+    },
+    {
+      "id": 25,
+      "price": "38.15",
+      "product": "Bonito Flakes - Toku Katsuo",
+      "weight": 65,
+      "type": "breakfast",
+      "img": "https://i5.walmartimages.com/asr/6a93d000-32b9-4d5c-a740-214ffab65d03_1.19c6719992d6441cd805052884a45415.jpeg"
+    },
+    {
+      "id": 26,
+      "price": "25.66",
+      "product": "Bread - Sticks, Thin, Plain",
+      "weight": 64,
+      "type": "breakfast",
+      "img": "https://www.mercadoslpineda.co/966-thickbox_default/pan-tajado-mama-ines-x-500-g-integral-avena-pasas-y-nueces.jpg"
+    },
+    {
+      "id": 27,
+      "price": "44.34",
+      "product": "Beer - Mill St Organic",
+      "weight": 27,
+      "type": "drinks",
+      "img": "https://nycbeerkegs.com/pub/media/catalog/product/cache/a3c28886b0eaebf28a5ff7c61ee62452/b/b/bb_935.png"
+    },
+    {
+      "id": 28,
+      "price": "1.02",
+      "product": "Corn",
+      "weight": 70,
+      "type": "vegetablesFruit",
+      "img": "https://s3.amazonaws.com/images.ecwid.com/images/36304335/1650637704.jpg"
+    },
+    {
+      "id": 29,
+      "price": "3.82",
+      "product": "bacon",
+      "weight": 7,
+      "type": "meats",
+      "img": "https://gamarti.com.mx/wp-content/uploads/2018/06/X213-Tocino-Ahumado-Kir.jpg"
+    },
+    {
+      "id": 30,
+      "price": "12.87",
+      "product": "Greens Mustard",
+      "weight": 71,
+      "type": "vegetablesFruit",
+      "img": "https://img.thrfun.com/img/096/521/mustard_greens_x2.jpg"
+    }
+  ],
+  "admin": [
+    {
+      "user": "Juanito",
+      "password": "contraseña123"
+    }
+  ],
+  "sales": [
+    {
+      "name": "Juanito",
+      "address": "juanito@yahoo.xs",
+      "phone": "12345",
+      "products": [
+        {
+          "id": "1",
+          "amount": "1"
+        },
+        {
+          "id": "3",
+          "amount": "2"
+        },
+        {
+          "id": "4",
+          "amount": "1"
+        }
+      ],
+      "total": "123.32",
+      "id": 1
+    }
+  ]
+}

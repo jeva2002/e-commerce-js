@@ -1,0 +1,136 @@
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 272px;
+  height: 400px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.card b {
+display: none;
+}
+
+.card img {
+  width: 270px;
+  max-height: 200px;
+}
+
+.info {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info h3 {
+  font-size: 15px;
+}
+
+.info h4 {
+  font-size: 15px;
+  color: #888;
+}
+
+#price {
+  font-weight: bolder;
+  color: #0fa67b;
+}
+
+.info h5 {
+  color: #0fa67b;
+}
+
+.toCart {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  background-color: #eeeeee66;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 10px;
+}
+
+#plus, #minus {
+  background-color: #fff;
+  border: none;
+  position: relative;
+  width: 40px;
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#minus {
+  right: 50px;
+  color: #f25050;
+}
+
+#minus:disabled {
+  color: #666;
+}
+
+#plus {
+  left: 50px;
+  color: #0fa67b;
+}
+
+.card .heart {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  bottom: 380px;
+  left: 220px;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.favorite {
+  background-color: #f117;
+}
+
+.card-container {
+  display: grid;
+  justify-content: center;
+  width: 58.2vw;
+  grid-template-columns: repeat(auto-fill, 272px);
+  gap: 5px;
+  padding: 5px;
+  background-color: #dddddd66;
+  border-radius: 10px;
+}
+
+#error {
+  color: #666;
+  width: 250px;
+  text-align: center;
+  position: absolute;
+  left: 40vw;
+  top: 35vh;
+}
+
+@media screen and (max-width: 970px) {
+  .card-container{
+    width: 70vw;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .card-container{
+    width: 85vw;
+  }
+  #error {
+    left: 20vw;
+  }
+}

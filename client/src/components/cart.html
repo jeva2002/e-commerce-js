@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/cards.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/cart-modal.css" />
+    <link rel="stylesheet" href="../styles/categories-modal.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <div class="items-container"></div>
+    <form class="cart-total">
+      <h4>Coupon Apply</h4>
+      <div id="coupon">
+        <input
+          type="text"
+          name=""
+          id="coupon-search"
+          placeholder="Enter Coupon Code Here..."
+        />
+        <input type="button" name="" id="coupon-submit" value="Apply" />
+      </div>
+      <div id="subtotal">
+        <h3>Subtotal</h3>
+        <h4>$0</h4>
+      </div>
+      <div id="coupon-discount">
+        <h3>Coupon Discount</h3>
+        <h4>0.00</h4>
+      </div>
+      <div id="shipping">
+        <h3>Shipping</h3>
+        <h4>$6.90</h4>
+      </div>
+      <div id="total-container">
+        <h3>Total(USD)</h3>
+        <h4>0</h4>
+      </div>
+      <input type="submit" value="Process To Checkout" id="checkout-button" />
+      <input type="button" value="<- Return To Shopping" id="return-button" />
+    </form>
+    <form class="finalize-purchase hidden-purchase">
+      <input type="text" name="name" id="name-input" placeholder="Name" />
+      <input
+        type="text"
+        name="address"
+        id="address-input"
+        placeholder="Address"
+      />
+      <input
+        type="number"
+        name="phone"
+        id="phone-input"
+        placeholder="Phone Number"
+      />
+      <div>
+        <input type="button" value="Cancel" id="cancel" />
+        <input type="submit" value="Buy Now" id="buy" />
+      </div>
+    </form>
+  </body>
+  <script src="../functionalities/cart.js" type="module"></script>
+</html>

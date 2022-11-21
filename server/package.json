@@ -1,0 +1,16 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Fake API para el consumo de un ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "server" : "json-server --watch db.json"
+  },
+  "keywords": [
+    "ecommerce",
+    "JSON",
+    "Server"
+  ],
+  "author": "Juan Esteban Villegas Arias",
+  "license": "MIT"
+}

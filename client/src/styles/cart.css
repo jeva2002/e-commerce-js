@@ -1,0 +1,279 @@
+.items-container {
+  margin-top: 50px;
+  min-height: 100px;
+}
+
+.item-cart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.item-cart b {
+  display: none;
+}
+
+.item-cart img {
+  width: 180px;
+}
+
+.item-cart h4 {
+  color: #777;
+}
+
+.item-cart .weight {
+  margin-top: 10px;
+}
+
+.item-cart h3 {
+  margin-top: 5px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  gap: 2vw;
+}
+
+.buttons input {
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  width: 35px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.remove, .save {
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+} 
+
+.item-cart .save {
+  margin-top: 20px;
+  color: #0fa67b;
+}
+
+.item-cart .remove {
+  color: #f25050;
+}
+
+.cart-total {
+  margin-top: 20px;
+  padding-bottom: 0;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px;
+  height: 420px;
+}
+
+.cart-total div {
+  display: flex;
+  color: #333;
+}
+
+.cart-total div h3 {
+  font-size: 15px;
+}
+
+.cart-total div h4 {
+  position: absolute;
+  right: 5.5vw;
+  font-size: 15px;
+}
+
+#coupon-search, #coupon-submit {
+  height: 40px;
+}
+
+#coupon-search{
+  width: 80vw;
+  border-radius: 5px 0 0 5px;
+  border: 3px solid #0fa67b;
+  outline: none;
+  padding-left: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#coupon-submit{
+  width: 12vw;
+  position: relative;
+  right: 3px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #0fa67b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#total-container {
+  border-top: 2px solid #f9f9f9;
+}
+
+#total-container h3, #total-container h4 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+#total-container h4 {
+  color: #0fa67b;
+}
+
+.cart-total #checkout-button, .cart-total #return-button {
+  font-size: 15px;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-total #checkout-button {
+  color: #fff;
+  background-color: #f25050;
+}
+
+.cart-total #return-button {
+  background-color: #ddd;
+}
+
+.finalize-purchase {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 70vw;
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 4px 7px 29px 4px;
+  border-radius: 10px;
+}
+
+.finalize-purchase input {
+  width: 80%;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  padding-left: 30px;
+  outline: none;
+}
+
+.finalize-purchase div {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 10vw;
+  gap: 10px;
+}
+
+.finalize-purchase div input {
+  padding-left: 0;
+  border: none;
+  width: 150px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#buy {
+  background-color: #f25050;
+  color: #fff;
+}
+
+.hidden-purchase {
+  display: none;
+}
+
+@media screen and (max-width: 900px){
+  .item-cart {
+    display: grid;
+    grid-template-columns: 110px 110px;
+    text-align: left;
+    padding: 15px;    
+  }
+
+  .item-cart * {
+    margin-bottom: 10px;
+  }
+
+  .item-cart img, .item-cart .item-cart-price-info {
+    grid-column: 1/2;
+  }
+
+  .item-cart .item-cart-info {
+    grid-column: 2/3;
+  }
+
+  .item-cart .total-item {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #0fa67b;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .item-cart .total-item h4 {
+    color: #000;
+    padding-top: 5px;
+  }
+
+  .item-cart .total-item h3 {
+    color: #fff;
+  }
+
+  .item-cart .buttons-container {
+    grid-column: 1/2;
+    text-align: center;
+  }
+
+  .item-cart .actions {
+    grid-column: 2/3;
+  }
+}
+
+@media screen and (max-width: 630px) {
+
+  #coupon-search {
+    width: 65vw;
+  }
+
+  #coupon-submit {
+    width: 30vw;
+  }
+
+  .items-container {
+    margin-top: 150px;
+  }
+
+  .item-cart {
+    width: 100vw;
+  }
+
+  .item-cart div, .item-cart form {
+    width: 100px;
+  }
+
+  .item-cart img {
+    width: 140px;
+  }
+
+  .finalize-purchase div input {
+    width: 100px;
+  }
+}

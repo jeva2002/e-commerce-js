@@ -1,0 +1,101 @@
+footer {
+  margin-top: 20px;
+  padding: 40px 80px;
+  background-color: #eeeeee66;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+  height: 350px;
+  border-bottom: #ccc 1px solid;
+}
+
+.footer-info ul {
+  width: 350px;
+}
+
+.footer-info li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-info p {
+  font-weight: 500;
+}
+
+.footer-info a, .footer-info b {
+  text-decoration: none;
+  color: #666;
+}
+
+.footer-info li div p {
+  border-bottom: #ccc 1px solid;
+  width: 150px;
+  padding-bottom: 15px;
+}
+
+.contact {
+  display: flex;
+  gap: 10px;
+}
+
+#download img {
+  margin: 20px 10px;
+  width: 40px;
+}
+
+.footer-info h2 {
+  color: #0fa67b;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.1px;
+}
+
+.footer-info h2 span {
+  color: #000;
+}
+
+footer .icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  color: #666;
+}
+
+#payment {
+  position: relative;
+  left: 15vw;
+}
+
+.social {
+  position: absolute;
+  right: 10vw;
+}
+
+@media screen and (max-width: 970px) {
+  #useful-links, #categories, #help-center, #payment {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 630px)  {
+
+  #logo {
+    display: none;
+  }
+
+  .footer-info {
+    height: 300px;
+  }
+  .social {
+    position: static;
+  }
+
+  footer .icons {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}

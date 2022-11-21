@@ -1,0 +1,33 @@
+.categories-modal {
+  position: absolute;
+  top: 20vh;
+  left: 7vw;
+  width: 270px;
+  height: 100vh;
+  background-color: #0fa67b;
+  border-radius: 10px;
+  box-shadow: rgba(83, 86, 90, 0.7) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  z-index: 10;
+}
+
+.categories-modal h3 {
+  margin-bottom: 20px;
+}
+
+.categories-modal input {
+  text-align: left;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hide-modal {
+  display: none;
+}
