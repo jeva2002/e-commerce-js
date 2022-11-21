@@ -1,7 +1,6 @@
 import { createCartItem } from '../components/cart-item.js';
 import { insertCommon, links } from './common.js';
-import { getProducts } from './request.js';
-import { createSale } from './users.js';
+import { getProducts, createSale } from './request.js';
 
 const addCart = (_amount, _parent) => {
   let listCart = !sessionStorage.getItem('cart')

@@ -2,19 +2,27 @@
   "products": [
     {
       "id": 1,
-      "price": "40.61",
+      "price": "43.61",
       "product": "Sauce - Hoisin",
-      "weight": "5",
+      "weight": 48,
       "type": "sauces",
       "img": "https://i5.walmartimages.com/asr/a290c796-2ebc-4af8-bfce-08e72004f071_1.c6c65f334d8c5ffcde66ff33de38d551.jpeg"
     },
     {
       "id": 2,
       "price": "14.40",
-      "product": "Cocoa - Natural",
-      "weight": "40",
+      "product": "Cocoa Powder - Natural",
+      "weight": 40,
       "type": "food",
       "img": "https://i5.walmartimages.com/asr/1205e2ba-53de-49b1-97c7-c2ee24bf5760.e8c5a7952d473794a6025dd6f3de458d.jpeg"
+    },
+    {
+      "id": 3,
+      "price": "17.78",
+      "product": "Peas - Frozen",
+      "weight": 34,
+      "type": "vegetablesFruit",
+      "img": "https://5.imimg.com/data5/TR/OE/MY-60287499/frozen-green-peas-500x500.jpg"
     },
     {
       "id": 4,

@@ -16,8 +16,69 @@
     <link rel="stylesheet" href="../styles/cart.css" />
     <link rel="stylesheet" href="../styles/cart-modal.css" />
     <link rel="stylesheet" href="../styles/categories-modal.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
     <title>Admin</title>
   </head>
-  <body></body>
+  <body>
+    <button id="create">Create product</button>
+    <div class="card-container"></div>
+    <form class="modify-product hidden-modal">
+      <h2></h2>
+      <input type="text" name="img" placeholder="Img URL" />
+      <input type="text" name="product" placeholder="Product name" />
+      <select name="type" id="">
+        <option value="vegetablesFruit">Vegetables & Fruit</option>
+        <option value="meats">Meats and Seafood</option>
+        <option value="breakfast">Breakfast, Dairy and More</option>
+        <option value="sauces">Sauces</option>
+        <option value="drinks">Drinks</option>
+        <option value="cleanliness">Cleanliness</option>
+      </select>
+      <input type="text" name="price" placeholder="Price" />
+      <input type="text" name="weight" placeholder="Weight" />
+      <div class="buttons-modify">
+        <input
+          type="button"
+          value="Cancel"
+          class="cancel-modify"
+          id="cancel-modify"
+        />
+        <input
+          type="submit"
+          value="Modify Product"
+          class="submit-modify"
+          id="submit-modify"
+        />
+      </div>
+    </form>
+    <form class="create-product hidden-modal">
+      <input type="text" name="img" placeholder="Img URL" />
+      <input type="text" name="product" placeholder="Product name" />
+      <select name="type" id="">
+        <option value="vegetablesFruit">Vegetables & Fruit</option>
+        <option value="meats">Meats and Seafood</option>
+        <option value="breakfast">Breakfast, Dairy and More</option>
+        <option value="sauces">Sauces</option>
+        <option value="drinks">Drinks</option>
+        <option value="cleanliness">Cleanliness</option>
+      </select>
+      <input type="text" name="price" placeholder="Price" />
+      <input type="text" name="weight" placeholder="Weight" />
+      <div class="buttons-modify">
+        <input
+          type="button"
+          value="Cancel"
+          class="cancel-modify"
+          id="cancel-create"
+        />
+        <input
+          type="submit"
+          value="Create Product"
+          class="submit-modify"
+          id="cancel-submit"
+        />
+      </div>
+    </form>
+  </body>
   <script src="../functionalities/admin.js" type="module"></script>
 </html>

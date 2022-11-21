@@ -1,0 +1,127 @@
+.card-container {
+  width: 85vw;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.card-container .card {
+  height: 400px;
+}
+
+.card-container .card .remove-item {
+  width: 40px;
+  position: relative;
+  bottom: 360px;
+  left: 220px;
+  border-radius: 50%;
+  border: 2px solid #666;
+  cursor: pointer;
+}
+
+.card-container .card .remove-item:hover {
+  background-color: #f25050;
+}
+
+.card-container .card * {
+  color: #666;
+}
+
+.card-container .card #price {
+  color: #666;
+}
+
+.card-container .modify-item {
+  color: #f25050;
+  cursor: pointer;
+}
+
+.modify-product, .create-product {
+  width: 80vw;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: rgba(83, 86, 90, 0.7) 0px 8px 24px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modify-product h2, .create-product h2 {
+  text-align: center;
+}
+
+.modify-product input, .modify-product select, .create-product input,  .create-product select{
+  width: 80%;
+  margin-left: 10%;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: #aaa solid 2px;
+  text-align: center;
+  outline: none;
+}
+
+.modify-product .buttons-modify {
+  display: flex;
+}
+
+.modify-product .buttons-modify input, .create-product .buttons-modify input {
+  margin-top: 20px;
+  width: 20%;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-modify {
+  position: relative;
+  left: 30vw;
+}
+
+.submit-modify {
+  position: relative;
+  left: 23vw;
+  background-color: #f25050;
+  color: #fff;
+}
+
+#id {
+  display: inline;
+}
+
+body .hidden-modal {
+  display: none;
+}
+
+#create {
+  margin-left: 10vw;
+  margin-top: 40px;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0fa67b;
+}
+
+#cancel-submit {
+  background-color: #0fa67b;
+}
+
+@media screen and (max-width: 630px){
+  #create {
+    margin-top: 150px;
+  }
+}
