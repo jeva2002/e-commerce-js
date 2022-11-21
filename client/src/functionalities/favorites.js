@@ -1,4 +1,4 @@
-import { showCards } from './card.js';
+import { giveFuncionalities, showCards } from './card.js';
 import { insertCommon, links } from './common.js';
 import { getProducts } from './request.js';
 
@@ -10,11 +10,16 @@ const listFavorites = localStorage.getItem('favorites')
   : null;
 
 if (listFavorites.length) {
-  if (listFavorites === 0) showCards(await getProducts(listFavorites));
-  else {
-    for (let i = 0; i < listFavorites.length; i++) {
-      showCards(await getProducts(listFavorites[i]));
+  try {
+    if (listFavorites === 0) showCards(await getProducts(listFavorites));
+    else {
+      for (let i = 0; i < listFavorites.length; i++) {
+        showCards(await getProducts(listFavorites[i]));
+      }
+      giveFuncionalities();
     }
+  } catch (error) {
+    console.error(error);
   }
 } else {
   const container = document.querySelector('.card-container');

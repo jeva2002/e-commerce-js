@@ -2,17 +2,21 @@ import { createItemCartNav } from '../components/cart-nav.js';
 import { getProducts } from './request.js';
 
 export const acummulatedTotal = async () => {
-  const acumulated = document.getElementById('acumulated');
-  const listItems = !sessionStorage.getItem('cart')
-    ? 0
-    : JSON.parse(sessionStorage.getItem('cart'));
-  let total = 0;
-  for (let i = 0; listItems.length > i; i++) {
-    total +=
-      listItems[i].amount *
-      parseFloat((await getProducts(listItems[i].id)).price);
+  try {
+    const acumulated = document.getElementById('acumulated');
+    const listItems = !sessionStorage.getItem('cart')
+      ? 0
+      : JSON.parse(sessionStorage.getItem('cart'));
+    let total = 0;
+    for (let i = 0; listItems.length > i; i++) {
+      total +=
+        listItems[i].amount *
+        parseFloat((await getProducts(listItems[i].id)).price);
+    }
+    acumulated.innerText = '$' + total.toFixed(2);
+  } catch (error) {
+    console.error(error);
   }
-  acumulated.innerText = '$' + total.toFixed(2);
 };
 
 export const deleteItem = (_id) => {

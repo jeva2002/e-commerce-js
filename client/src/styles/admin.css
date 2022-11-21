@@ -14,15 +14,14 @@
 .card-container .card .remove-item {
   width: 40px;
   position: relative;
-  bottom: 360px;
+  bottom: 390px;
   left: 220px;
   border-radius: 50%;
-  border: 2px solid #666;
   cursor: pointer;
 }
 
 .card-container .card .remove-item:hover {
-  background-color: #f25050;
+  background-color: #ed0202b5;
 }
 
 .card-container .card * {
@@ -38,13 +37,17 @@
   cursor: pointer;
 }
 
+.card-container .modify-item:hover {
+  text-decoration: underline;
+}
+
 .modify-product, .create-product {
   width: 80vw;
   height: 500px;
   background-color: #fff;
   box-shadow: rgba(83, 86, 90, 0.7) 0px 8px 24px;
   border-radius: 10px;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -103,7 +106,7 @@ body .hidden-modal {
   display: none;
 }
 
-#create {
+#create, #sales {
   margin-left: 10vw;
   margin-top: 40px;
   height: 40px;
@@ -113,15 +116,109 @@ body .hidden-modal {
   font-size: 17px;
   font-weight: bold;
   color: #fff;
+  cursor: pointer;
+}
+
+#create {
   background-color: #0fa67b;
+}
+
+#create:hover {
+  background-color: #0e9a72;
+}
+
+#sales {
+  background-color: #f2913d;
+}
+
+#sales:hover {
+  background-color: #df8537;
 }
 
 #cancel-submit {
   background-color: #0fa67b;
 }
 
+.sales-container {
+  width: 80vw;
+  height: 600px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: rgba(83, 86, 90, 0.7) 0px 8px 24px;
+  border-radius: 10px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+.sales-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #f25050;
+}
+
+.close-sales-list {
+  width: 40px;
+  position: absolute;
+  top: 2vh;
+  left: 75vw;
+  cursor: pointer;
+}
+
+.sale-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.sale-item li {
+  list-style: none;
+}
+
+.sale-item h3 {
+  font-size: 17px;
+}
+
+.sale-item h4 {
+  font-size: 12px;
+}
+
+.sales-container .total-bill {
+  color: #0e9a72;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 970px) {
+  .close-sales-list {
+    left: 70vw;
+  }
+}
+
 @media screen and (max-width: 630px){
   #create {
     margin-top: 150px;
+  }
+
+  .card-container {
+    margin-left: 10px;
+  }
+
+  .sales-container {
+    margin-top: 150px;
+  }
+
+  .close-sales-list {
+    left: 60vw;
   }
 }

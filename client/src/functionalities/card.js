@@ -35,10 +35,10 @@ const modifyFavorites = (_id) => {
     ? JSON.parse(localStorage.getItem('favorites'))
     : null;
   let list;
+  const flag = favoritesList.find((element) => element === _id);
+  if (flag) list = [];
+  else list = [_id];
   if (favoritesList) {
-    const flag = favoritesList.find((element) => element === _id);
-    if (flag) list = [];
-    else list = [_id];
     if (favoritesList.length === undefined) {
       list.push(favoritesList);
     } else {
@@ -65,30 +65,30 @@ const isFavorite = (_id, _element) => {
   }
 };
 
-const giveFuncionalities = () => {
+export const giveFuncionalities = () => {
   const amountArray = Array.from(document.getElementsByClassName('amount'));
   const minusArray = Array.from(document.getElementsByClassName('minus'));
   const plusArray = Array.from(document.getElementsByClassName('plus'));
   const favoriteArray = Array.from(document.getElementsByClassName('heart'));
   const parents = [];
-  for (let element in amountArray) {
-    parents.push(amountArray[element].parentElement.parentElement);
-    minusArray[element].addEventListener('click', () => {
-      reduceAmount(amountArray[element], parents[element]);
+  for (let i = 0; i < amountArray.length; i++) {
+    parents.push(amountArray[i].parentElement.parentElement);
+    minusArray[i].addEventListener('click', () => {
+      reduceAmount(amountArray[i], parents[i]);
       document.querySelector('.cart').classList.add('ocult');
     });
-    plusArray[element].addEventListener('click', () => {
-      increaseAmount(amountArray[element], parents[element]);
+    plusArray[i].addEventListener('click', () => {
+      increaseAmount(amountArray[i], parents[i]);
       document.querySelector('.cart').classList.add('ocult');
     });
     const id = parseInt(
-      favoriteArray[element].parentNode.children[1].children[5].innerText
+      favoriteArray[i].parentNode.children[1].children[5].innerText
     );
-    favoriteArray[element].addEventListener('click', () => {
-      favoriteArray[element].classList.toggle('favorite');
+    favoriteArray[i].addEventListener('click', () => {
+      favoriteArray[i].classList.toggle('favorite');
       modifyFavorites(id);
     });
-    isFavorite(id, favoriteArray[element]);
+    isFavorite(id, favoriteArray[i]);
   }
 };
 
@@ -98,8 +98,8 @@ export const showCards = (_data) => {
     container.appendChild(createCard(_data));
   } else {
     for (let i = 0; i < _data.length; i++) {
+      console.log(_data[i]);
       container.appendChild(createCard(_data[i]));
     }
   }
-  giveFuncionalities();
 };

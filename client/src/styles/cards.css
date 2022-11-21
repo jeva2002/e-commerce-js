@@ -86,17 +86,17 @@ display: none;
 
 .card .heart {
   position: relative;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   bottom: 380px;
-  left: 220px;
-  border: 2px solid black;
+  left: 215px;
+  padding: 5px;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.favorite {
-  background-color: #f117;
+.favorite, .card .heart:hover {
+  background-color: #ff9ecd;
 }
 
 .card-container {

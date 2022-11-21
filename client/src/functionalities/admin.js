@@ -1,14 +1,17 @@
 import { createAdminCard } from '../components/admin-card.js';
+import { createSaleItem } from '../components/sale-item.js';
 import { insertCommon, links } from './common.js';
 import {
   deleteProduct,
   getProducts,
   modifyProduct,
   createProduct,
+  getSales,
 } from './request.js';
 
 const modifyForm = document.querySelector('.modify-product');
 const createForm = document.querySelector('.create-product');
+const salesContainer = document.querySelector('.sales-container');
 
 const modifyInputsModal = (_parent) => {
   modifyForm.children[0].innerHTML =
@@ -49,22 +52,43 @@ const showProducts = async () => {
   addFuncionalities(document.querySelectorAll('.card'));
 };
 
+const showSales = async () => {
+  try {
+    const sales = await getSales();
+    if (sales) {
+      if (sales.length === 0) {
+        salesContainer.appendChild(createSaleItem(sales[0]));
+      } else if (sales.length > 0) {
+        for (let i = 0; i < sales.length; i++) {
+          salesContainer.appendChild(createSaleItem(sales[i]));
+        }
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 document.querySelector('#cancel-modify').addEventListener('click', () => {
   modifyForm.classList.add('hidden-modal');
 });
 
 modifyForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const id = modifyForm.children[0].innerHTML.replace('ID: ', '');
-  const data = {
-    price: e.target.price.value,
-    product: e.target.product.value,
-    weight: e.target.weight.value,
-    type: e.target.type.value,
-    img: e.target.img.value,
-  };
-  await modifyProduct(id, data);
-  location.reload();
+  try {
+    e.preventDefault();
+    const id = modifyForm.children[0].innerHTML.replace('ID: ', '');
+    const data = {
+      price: e.target.price.value,
+      product: e.target.product.value,
+      weight: e.target.weight.value,
+      type: e.target.type.value,
+      img: e.target.img.value,
+    };
+    await modifyProduct(id, data);
+    location.reload();
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 document.getElementById('create').addEventListener('click', () => {
@@ -76,16 +100,29 @@ document.getElementById('cancel-create').addEventListener('click', () => {
 });
 
 createForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = {
-    price: e.target.price.value,
-    product: e.target.product.value,
-    weight: e.target.weight.value,
-    type: e.target.type.value,
-    img: e.target.img.value,
-  };
-  await createProduct(data);
-  location.reload();
+  try {
+    e.preventDefault();
+    const data = {
+      price: e.target.price.value,
+      product: e.target.product.value,
+      weight: e.target.weight.value,
+      type: e.target.type.value,
+      img: e.target.img.value,
+    };
+    await createProduct(data);
+    location.reload();
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+document.getElementById('sales').addEventListener('click', () => {
+  salesContainer.classList.remove('hidden-modal');
+  showSales();
+});
+
+document.querySelector('.close-sales-list').addEventListener('click', () => {
+  salesContainer.classList.add('hidden-modal');
 });
 
 insertCommon();

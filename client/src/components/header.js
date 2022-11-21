@@ -2,7 +2,7 @@ export const headerComponent = (_isIndex = false) => {
   const header = document.createElement('header');
   header.innerHTML = `  
   <div class="user-options">
-        <h6>Something you love is now on sale! <a href="">Buy Now!</a></h6>
+        <h6>Something you love is now on sale! <a href=${`http://${window.location.host}/src/components/products.html`}>Buy Now!</a></h6>
         <div class="options">
           <img
             src=${
@@ -25,7 +25,7 @@ export const headerComponent = (_isIndex = false) => {
       </div>
       <nav>
         <div class="main-nav">
-          <h1>Fast<span>kart</span>.</h1>
+          <h1 id="main-title">Fast<span>kart</span>.</h1>
           <form id="search-form">
             <button id="location">
               <img src=${

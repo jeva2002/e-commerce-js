@@ -84,64 +84,75 @@ const itemsList = sessionStorage.getItem('cart')
   : null;
 
 const showAccumulated = async (_itemsList) => {
-  if (_itemsList) {
-    const total = document.getElementById('subtotal');
-    total.children[1].innerHTML = '0';
-    let accumulated = 0;
-    if (_itemsList.length === 0 && _itemsList[0]) {
-      const request = await getProducts(_itemsList[0].id);
-      accumulated = (
-        parseFloat(request.price) * parseInt(_itemsList[0].amount)
-      ).toFixed(2);
-      total.children[1].innerHTML = accumulated;
-    } else if (_itemsList.length > 0) {
-      for (let i = 0; i < _itemsList.length; i++) {
-        const request = await getProducts(_itemsList[i].id);
-        accumulated +=
-          parseFloat(request.price) * parseInt(_itemsList[i].amount);
+  try {
+    if (_itemsList) {
+      const total = document.getElementById('subtotal');
+      total.children[1].innerHTML = '0';
+      let accumulated = 0;
+      if (_itemsList.length === 0 && _itemsList[0]) {
+        const request = await getProducts(_itemsList[0].id);
+        accumulated = (
+          parseFloat(request.price) * parseInt(_itemsList[0].amount)
+        ).toFixed(2);
+        total.children[1].innerHTML = accumulated;
+      } else if (_itemsList.length > 0) {
+        for (let i = 0; i < _itemsList.length; i++) {
+          const request = await getProducts(_itemsList[i].id);
+          accumulated +=
+            parseFloat(request.price) * parseInt(_itemsList[i].amount);
+        }
+        total.children[1].innerHTML = '$' + accumulated.toFixed(2);
       }
-      total.children[1].innerHTML = '$' + accumulated.toFixed(2);
+      return accumulated;
     }
-    return accumulated;
+  } catch (error) {
+    console.error(error);
   }
 };
 
 const modifyCartTotal = async () => {
-  const itemsList = sessionStorage.getItem('cart')
-    ? JSON.parse(sessionStorage.getItem('cart'))
-    : null;
-
-  const accumulated = await showAccumulated(itemsList);
-  const shipping = parseFloat(
-    document.getElementById('shipping').children[1].innerHTML.replace('$', '')
-  );
-  document.getElementById('total-container').children[1].innerHTML =
-    '$' + (shipping + (accumulated > 0 ? accumulated : -shipping)).toFixed(2);
+  try {
+    const itemsList = sessionStorage.getItem('cart')
+      ? JSON.parse(sessionStorage.getItem('cart'))
+      : null;
+    const accumulated = await showAccumulated(itemsList);
+    const shipping = parseFloat(
+      document.getElementById('shipping').children[1].innerHTML.replace('$', '')
+    );
+    document.getElementById('total-container').children[1].innerHTML =
+      '$' + (shipping + (accumulated > 0 ? accumulated : -shipping)).toFixed(2);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 const showItems = async (_itemsList) => {
-  if (_itemsList) {
-    const container = document.querySelector('.items-container');
-    if (_itemsList.length === 0 && _itemsList[0]) {
-      if (_itemsList[0].amount > 0) {
-        const cart = createCartItem(
-          await getProducts(_itemsList[0].id),
-          parseInt(_itemsList[0].amount)
-        );
-        container.appendChild(cart);
-      }
-    } else if (_itemsList.length > 0) {
-      for (let i = 0; _itemsList.length > i; i++) {
-        if (_itemsList[i].amount > 0) {
+  try {
+    if (_itemsList) {
+      const container = document.querySelector('.items-container');
+      if (_itemsList.length === 0 && _itemsList[0]) {
+        if (_itemsList[0].amount > 0) {
           const cart = createCartItem(
-            await getProducts(_itemsList[i].id),
-            parseInt(_itemsList[i].amount)
+            await getProducts(_itemsList[0].id),
+            parseInt(_itemsList[0].amount)
           );
           container.appendChild(cart);
         }
+      } else if (_itemsList.length > 0) {
+        for (let i = 0; _itemsList.length > i; i++) {
+          if (_itemsList[i].amount > 0) {
+            const cart = createCartItem(
+              await getProducts(_itemsList[i].id),
+              parseInt(_itemsList[i].amount)
+            );
+            container.appendChild(cart);
+          }
+        }
       }
+      addFuncionalities();
     }
-    addFuncionalities();
+  } catch (error) {
+    console.error(error);
   }
 };
 

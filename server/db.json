@@ -2,19 +2,27 @@
   "products": [
     {
       "id": 1,
-      "price": "40.61",
+      "price": "43.61",
       "product": "Sauce - Hoisin",
-      "weight": "5",
+      "weight": "3",
       "type": "sauces",
       "img": "https://i5.walmartimages.com/asr/a290c796-2ebc-4af8-bfce-08e72004f071_1.c6c65f334d8c5ffcde66ff33de38d551.jpeg"
     },
     {
       "id": 2,
       "price": "14.40",
-      "product": "Cocoa - Natural",
+      "product": "Cocoa Powder - Natural",
       "weight": "40",
-      "type": "food",
+      "type": "breakfast",
       "img": "https://i5.walmartimages.com/asr/1205e2ba-53de-49b1-97c7-c2ee24bf5760.e8c5a7952d473794a6025dd6f3de458d.jpeg"
+    },
+    {
+      "id": 3,
+      "price": "17.78",
+      "product": "Peas - Frozen",
+      "weight": 34,
+      "type": "vegetablesFruit",
+      "img": "https://5.imimg.com/data5/TR/OE/MY-60287499/frozen-green-peas-500x500.jpg"
     },
     {
       "id": 4,
@@ -73,14 +81,6 @@
       "img": "https://cdn.shopify.com/s/files/1/0492/2458/1274/products/db50b41a-5198-4aa5-bdb3-189ac7dbe535_700x700.png?v=1622197667"
     },
     {
-      "id": 11,
-      "price": "38.39",
-      "product": "Lamb - Sausage Casings",
-      "weight": 48,
-      "type": "meats",
-      "img": "https://static.wixstatic.com/media/91fc24_1b4054e8b82b46fb9a59568fe6e70e55~mv2.png/v1/fill/w_498,h_498,al_c,usm_0.66_1.00_0.01/91fc24_1b4054e8b82b46fb9a59568fe6e70e55~mv2.png"
-    },
-    {
       "id": 12,
       "price": "29.71",
       "product": "Cheese - Grie Des Champ",
@@ -131,16 +131,16 @@
     {
       "id": 18,
       "price": "18.79",
-      "product": "Cloro",
-      "weight": 3,
+      "product": "Clorox",
+      "weight": "3",
       "type": "cleanliness",
       "img": "https://walmartcr.vtexassets.com/arquivos/ids/221595/Cloro-Suli-Galon-3785ml-1-26799.jpg?v=637626934769130000"
     },
     {
       "id": 19,
-      "price": "49.56",
-      "product": "Soap",
-      "weight": 92,
+      "price": "10",
+      "product": "Soap Dove",
+      "weight": "50",
       "type": "cleanliness",
       "img": "https://www.4sgm.com/assets/Image/Product/detailsbig/49048.jpg"
     },
@@ -225,24 +225,18 @@
       "img": "https://gamarti.com.mx/wp-content/uploads/2018/06/X213-Tocino-Ahumado-Kir.jpg"
     },
     {
-      "id": 30,
-      "price": "12.87",
-      "product": "Greens Mustard",
-      "weight": 71,
-      "type": "vegetablesFruit",
-      "img": "https://img.thrfun.com/img/096/521/mustard_greens_x2.jpg"
-    }
-  ],
-  "admin": [
-    {
-      "user": "Juanito",
-      "password": "contraseña123"
+      "price": "3.82",
+      "product": "Bacon",
+      "weight": "40",
+      "type": "meats",
+      "img": "https://gamarti.com.mx/wp-content/uploads/2018/06/X213-Tocino-Ahumado-Kir.jpg",
+      "id": 30
     }
   ],
   "sales": [
     {
       "name": "Juanito",
-      "address": "juanito@yahoo.xs",
+      "address": "calle 13",
       "phone": "12345",
       "products": [
         {
@@ -250,28 +244,15 @@
           "amount": "1"
         },
         {
+          "id": "2",
+          "amount": "1"
+        },
+        {
           "id": "3",
-          "amount": "2"
+          "amount": "1"
         },
         {
           "id": "4",
-          "amount": "1"
-        }
-      ],
-      "total": "123.32",
-      "id": 1
-    },
-    {
-      "name": "Juan Esteban",
-      "address": "adsasd@asdsad",
-      "phone": "1312213213",
-      "products": [
-        {
-          "id": "1",
-          "amount": "3"
-        },
-        {
-          "id": "2",
           "amount": "1"
         },
         {
@@ -281,10 +262,86 @@
         {
           "id": "6",
           "amount": "1"
+        },
+        {
+          "id": "7",
+          "amount": "1"
+        },
+        {
+          "id": "8",
+          "amount": "1"
         }
       ],
-      "total": "160.84",
+      "total": "175.71",
+      "id": 1
+    },
+    {
+      "name": "Majito",
+      "address": "calle 41",
+      "phone": "12345",
+      "products": [
+        {
+          "id": "5",
+          "amount": "5"
+        },
+        {
+          "id": "6",
+          "amount": "5"
+        }
+      ],
+      "total": "50.45",
       "id": 2
+    },
+    {
+      "name": "Maikol",
+      "address": "Calle 31",
+      "phone": "1453",
+      "products": [
+        {
+          "id": "4",
+          "amount": "3"
+        }
+      ],
+      "total": "118.65",
+      "id": 3
+    },
+    {
+      "name": "Changó",
+      "address": "calle buen",
+      "phone": "42115",
+      "products": [
+        {
+          "id": "14",
+          "amount": "1"
+        },
+        {
+          "id": "13",
+          "amount": "1"
+        },
+        {
+          "id": "15",
+          "amount": "1"
+        },
+        {
+          "id": "16",
+          "amount": "1"
+        }
+      ],
+      "total": "51.47",
+      "id": 4
+    },
+    {
+      "name": "Un vagabundo de por ahí",
+      "address": "todas partes",
+      "phone": "1231353",
+      "products": [
+        {
+          "id": "9",
+          "amount": "2"
+        }
+      ],
+      "total": "88.62",
+      "id": 5
     }
   ]
 }

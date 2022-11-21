@@ -29,39 +29,44 @@ export const insertCommon = (_isIndex) => {
   });
 
   document.getElementById('cart-icon').addEventListener('click', async () => {
-    document.getElementById('item-container').innerHTML = '';
-    const itemsCart = !sessionStorage.getItem('cart')
-      ? null
-      : JSON.parse(sessionStorage.getItem('cart'));
-    if (itemsCart) {
-      if (itemsCart.length === 0) {
-        if (itemsCart.amount > 0) {
-          showItems(itemsCart[0], _isIndex);
-        } else {
-          if (JSON.parse(sessionStorage.getItem('cart')).id)
-            deleteItem(itemsCart[0].id);
-        }
-      } else {
-        for (let i = 0; itemsCart.length > i; i++) {
-          if (itemsCart[i].amount > 0) {
-            showItems(itemsCart[i], _isIndex);
+    try {
+      document.getElementById('item-container').innerHTML = '';
+      const itemsCart = !sessionStorage.getItem('cart')
+        ? null
+        : JSON.parse(sessionStorage.getItem('cart'));
+      if (itemsCart) {
+        if (itemsCart.length === 0) {
+          if (itemsCart.amount > 0) {
+            showItems(itemsCart[0], _isIndex);
           } else {
-            deleteItem(itemsCart[i].id);
+            if (JSON.parse(sessionStorage.getItem('cart')).id)
+              deleteItem(itemsCart[0].id);
+          }
+        } else {
+          for (let i = 0; itemsCart.length > i; i++) {
+            if (itemsCart[i].amount > 0) {
+              showItems(itemsCart[i], _isIndex);
+            } else {
+              deleteItem(itemsCart[i].id);
+            }
           }
         }
       }
+
+      acummulatedTotal();
+
+      document.querySelector('#view').addEventListener('click', () => {
+        window.location.href = `http://${window.location.host}/src/components/cart.html`;
+      });
+
+      document.querySelector('#check').addEventListener('click', () => {
+        window.location.href = `http://${window.location.host}/src/components/cart.html`;
+      });
+
+      document.querySelector('.cart').classList.toggle('ocult');
+    } catch (error) {
+      console.error(error);
     }
-
-    acummulatedTotal();
-
-    document.querySelector('#view').addEventListener('click', () => {
-      window.location.href = `http://${window.location.host}/src/components/cart.html`;
-    });
-    document.querySelector('#check').addEventListener('click', () => {
-      window.location.href = `http://${window.location.host}/src/components/cart.html`;
-    });
-
-    document.querySelector('.cart').classList.toggle('ocult');
   });
 
   const categoriesModal = document.querySelector('.categories-modal');
@@ -101,6 +106,10 @@ export const insertCommon = (_isIndex) => {
 
   document.getElementById('user-icon-res').addEventListener('click', () => {
     window.location.href = `http://${window.location.host}/src/components/admin.html`;
+  });
+
+  document.getElementById('main-title').addEventListener('click', () => {
+    window.location.href = `http://${window.location.host}/index.html`;
   });
 
   document.defaultView.addEventListener('resize', () => {

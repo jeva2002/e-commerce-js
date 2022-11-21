@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.buttons input:hover {
+  background-color: #aaa;
+}
+
 .remove, .save {
   font-size: 15px;
   text-decoration: underline;
@@ -115,6 +119,10 @@
   cursor: pointer;
 }
 
+#coupon-submit:hover {
+  background-color: #0c8865;
+}
+
 #total-container {
   border-top: 2px solid #f9f9f9;
 }
@@ -143,8 +151,16 @@
   background-color: #f25050;
 }
 
+.cart-total #checkout-button:hover {
+  background-color: #dd4f4f;
+}
+
 .cart-total #return-button {
   background-color: #ddd;
+}
+
+.cart-total #return-button:hover {
+  background-color: #aaa;
 }
 
 .finalize-purchase {

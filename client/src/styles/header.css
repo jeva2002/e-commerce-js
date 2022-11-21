@@ -95,6 +95,7 @@ nav {
   border-radius: 5px;
   border: 1px solid #f1f1f1;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 #location img {
@@ -131,6 +132,11 @@ nav {
   right: 10px;
 }
 
+#submit:hover {
+  background-color: #d17e35;
+  cursor: pointer;
+}
+
 #submit img {
   padding-top: 3px;
 }
@@ -142,6 +148,11 @@ nav {
   font-size: 25px;
   font-weight: lighter;
   cursor: pointer;
+}
+
+#icons img:hover {
+  background-color: #d1d1d1;
+  border-radius: 50%;
 }
 
 .links-container {
@@ -167,6 +178,10 @@ nav {
   cursor: pointer;
 }
 
+.links-container span:hover {
+  background-color: #0e906b;
+}
+
 .links {
   margin: 0 10vw;
 }
@@ -178,6 +193,10 @@ nav {
   margin: 0 10px;
   outline: none;
   cursor: pointer;
+}
+
+.links select:hover, .links a:hover {
+  text-decoration: underline;
 }
 
 .links a {
@@ -193,6 +212,7 @@ nav {
   height: 32px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .links-container button img {
@@ -202,6 +222,10 @@ nav {
 #icons-md img {
   cursor: pointer;
   margin-top: 10px;
+}
+
+#main-title {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1130px) {
