@@ -74,9 +74,9 @@
     },
     {
       "id": 10,
-      "price": "15.69",
+      "price": "10",
       "product": "White Onion",
-      "weight": 17,
+      "weight": "17",
       "type": "vegetablesFruit",
       "img": "https://cdn.shopify.com/s/files/1/0492/2458/1274/products/db50b41a-5198-4aa5-bdb3-189ac7dbe535_700x700.png?v=1622197667"
     },
@@ -108,7 +108,7 @@
       "id": 15,
       "price": "6.73",
       "product": "Corn Kernels - Frozen",
-      "weight": 40,
+      "weight": "40",
       "type": "vegetablesFruit",
       "img": "http://cdn.shopify.com/s/files/1/0016/0032/3635/products/Frozen_Sweet_Corn_500g_PackShot_1024x1024.jpg?v=1561739401"
     },
@@ -215,14 +215,6 @@
       "weight": 70,
       "type": "vegetablesFruit",
       "img": "https://s3.amazonaws.com/images.ecwid.com/images/36304335/1650637704.jpg"
-    },
-    {
-      "id": 29,
-      "price": "3.82",
-      "product": "bacon",
-      "weight": 7,
-      "type": "meats",
-      "img": "https://gamarti.com.mx/wp-content/uploads/2018/06/X213-Tocino-Ahumado-Kir.jpg"
     },
     {
       "price": "3.82",
@@ -342,6 +334,60 @@
       ],
       "total": "88.62",
       "id": 5
+    },
+    {
+      "name": "Olguis",
+      "address": "calle 1 ",
+      "phone": "1513",
+      "products": [
+        {
+          "id": "4",
+          "amount": "1"
+        },
+        {
+          "id": "5",
+          "amount": "1"
+        },
+        {
+          "id": "6",
+          "amount": "3"
+        },
+        {
+          "id": "1",
+          "amount": "1"
+        },
+        {
+          "id": "2",
+          "amount": "1"
+        },
+        {
+          "id": "3",
+          "amount": "2"
+        },
+        {
+          "id": "18",
+          "amount": "1"
+        }
+      ],
+      "total": "181.62",
+      "id": 6
+    },
+    {
+      "name": "Pedrito",
+      "address": "calle 2",
+      "phone": "54510",
+      "products": [
+        {
+          "id": "1",
+          "amount": "1"
+        },
+        {
+          "id": "10",
+          "amount": "1"
+        }
+      ],
+      "total": "60.51",
+      "id": 7
     }
   ]
 }

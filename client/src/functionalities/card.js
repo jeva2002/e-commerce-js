@@ -93,13 +93,16 @@ export const giveFuncionalities = () => {
 };
 
 export const showCards = (_data) => {
-  const container = document.querySelector('.card-container');
-  if (_data.length === undefined) {
-    container.appendChild(createCard(_data));
-  } else {
-    for (let i = 0; i < _data.length; i++) {
-      console.log(_data[i]);
-      container.appendChild(createCard(_data[i]));
+  try {
+    const container = document.querySelector('.card-container');
+    if (_data.length === undefined) {
+      container.appendChild(createCard(_data));
+    } else {
+      for (let i = 0; i < _data.length; i++) {
+        container.appendChild(createCard(_data[i]));
+      }
     }
+  } catch (error) {
+    console.error(error);
   }
 };

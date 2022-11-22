@@ -40,16 +40,22 @@ const addFuncionalities = (_cards) => {
 };
 
 const showProducts = async () => {
-  const container = document.querySelector('.card-container');
-  const products = await getProducts();
-  if (products.length === undefined) {
-    container.appendChild(createAdminCard(products[0]));
-  } else {
-    for (let i = 0; i < products.length; i++) {
-      container.appendChild(createAdminCard(products[i]));
+  try {
+    const container = document.querySelector('.card-container');
+    const products = await getProducts();
+    if (products) {
+      if (products.length === undefined) {
+        container.appendChild(createAdminCard(products[0]));
+      } else {
+        for (let i = 0; i < products.length; i++) {
+          container.appendChild(createAdminCard(products[i]));
+        }
+      }
+      addFuncionalities(document.querySelectorAll('.card'));
     }
+  } catch (error) {
+    console.error(error);
   }
-  addFuncionalities(document.querySelectorAll('.card'));
 };
 
 const showSales = async () => {
@@ -125,6 +131,10 @@ document.querySelector('.close-sales-list').addEventListener('click', () => {
   salesContainer.classList.add('hidden-modal');
 });
 
-insertCommon();
-links();
-showProducts();
+try {
+  insertCommon();
+  links();
+  showProducts();
+} catch (error) {
+  console.log(error);
+}

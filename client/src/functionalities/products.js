@@ -2,9 +2,6 @@ import { giveFuncionalities, showCards } from './card.js';
 import { insertCommon, links } from './common.js';
 import { getProducts } from './request.js';
 
-insertCommon();
-links();
-
 const showProducts = async () => {
   const search = sessionStorage.getItem('search')
     ? JSON.parse(sessionStorage.getItem('search'))
@@ -31,4 +28,10 @@ const showProducts = async () => {
   sessionStorage.removeItem('searchByWord');
 };
 
-showProducts();
+try {
+  insertCommon();
+  links();
+  showProducts();
+} catch (error) {
+  console.error(error);
+}

@@ -212,7 +212,11 @@ document
     }
   });
 
-insertCommon();
-links();
-showItems(itemsList);
-modifyCartTotal();
+try {
+  insertCommon();
+  links();
+  showItems(itemsList);
+  modifyCartTotal();
+} catch (error) {
+  console.error(error);
+}

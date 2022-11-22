@@ -2,11 +2,14 @@ import { giveFuncionalities, showCards } from '../functionalities/card.js';
 import { insertCommon, links } from './common.js';
 import { getProducts } from './request.js';
 
-insertCommon(true);
-links(true);
-
-showCards(await getProducts('?_limit=6'));
-giveFuncionalities();
+try {
+  insertCommon(true);
+  links(true);
+  showCards(await getProducts('?_limit=6'));
+  giveFuncionalities();
+} catch (error) {
+  console.error(error);
+}
 
 document.querySelector('.categories').addEventListener('click', (e) => {
   if (e.target.name) {

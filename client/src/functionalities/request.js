@@ -7,7 +7,7 @@ export const getProducts = async (_options = '') => {
     ).json();
     return request;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
 };
 
@@ -23,7 +23,7 @@ export const deleteProduct = async (_id) => {
     ).json();
     return request;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
 };
 
@@ -40,7 +40,7 @@ export const modifyProduct = async (_id, _data) => {
     ).json();
     return request;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
 };
 
@@ -57,7 +57,7 @@ export const createProduct = async (_data) => {
     ).json();
     return request;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
 };
 
@@ -66,7 +66,7 @@ export const getSales = async (_id) => {
     const request = await (await fetch(URL_SERVER + 'sales/')).json();
     return request;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
 };
 
@@ -84,6 +84,6 @@ export const createSale = async (_sale) => {
     ).json();
     return request;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
 };
