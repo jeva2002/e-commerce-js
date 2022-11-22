@@ -11,6 +11,12 @@
   margin-left: 6vw;
 }
 
+.title {
+  margin-top: 50px;
+  font-size: 30px;
+  margin-left: 100px;
+}
+
 @media screen and (max-width: 970px) {
   .card-container{
     width: 90vw;
@@ -22,6 +28,10 @@
 @media screen and (max-width: 630px) {
   .card-container{
     width: 90vw;
-    margin-top: 170px;
+    margin-top: 50px;
+  }
+
+  .title {
+    margin-top: 200px;
   }
 }
