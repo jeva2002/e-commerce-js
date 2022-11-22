@@ -10,7 +10,7 @@ export const createSaleItem = (_data) => {
     </div>
     <ul class="sale-list">
     </ul>
-    <h3 class="total-bill">total</h3>
+    <h3 class="total-bill">$${_data.total}</h3>
   `;
 
   if (_data.products.length === 0) {
