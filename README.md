@@ -1,16 +1,25 @@
 # e-commerce-js
-A partir de unos requisitos específicos se construye un e-commerce con JS, CSS y HTML. El eccomerce permite la visualización de algunos productos que se
-consumen de una fake rest API por medio del módulo JSON Server rincipal, también desde esta permite acceder a las distintas secciones de la plataforma,
-y permite redirigirse a la página de productos y filtrarlos en el sessionStorage. En la página de productos muestra la totalidad de los productos por defecto
-o si hay alguna búsqueda realiza los filtros correspondientes. Cada tarjeta por producto cuenta con la opción para añadirlo a favoritos y guardarlo 
-en el localStorage, también permite que se agregue cada producto a un carrito y tiene la opción de variar sus cantidades. Al carrito se puede acceder
-por medio de su ícono en el navegador que por medio e un click muestra un modal con los productos que se han agregado, su total, la opción para removerlos y 
-para ir a la página que permite la transacción. e cuenta con una página de favoritos donde se almacenan estos con sus respectivas tarjetas. 
-En la pestaña de transacción se muestran los elementos agregados al carrito, los precios y los acumulados totales de la operación. En esta pestaña se admite 
-que se remuevan elementos o que se modifique la cantidad, también ermite que se complete la operación por medio de un botón que abrirá un formulario y que de 
-llenarse correctamente guardará los datos en el JSON server. También se cuenta con una pestaña para administrador a la que se accede por el ícono de usuario;
-allí se pueden modificar los productos, crearlos o eliminarlos de la base de datos (las primeras dos opciones por medio de formularios y la última por medio
-de un signo en las cards). También se cuenta como una opción que permite visualizar las compras ya realizadas.
 
-Para ejecutar el proyecto se debe contar con la extensión Live Server para el directorio del Cliente, y con la librería JSON-Server para la simulación de un
-servidor en el directorio correspondiente a este.
+A partir de unos requisitos específicos se construye un e-commerce con JS, CSS y HTML que consume un JSON Server.
+
+## Ejecución
+
+El cliente del eCommerce se ejecuta por medio de la extensión live server de VSC desde su respectivo directorio, y para activar el servidor se ejecuta el comando "npm run server" en su respectiva carpeta.
+
+## Funcionamiento
+
+El JSON server contiene una data básica de varios productos y algunas compras hechas que se pueden visualizar directamente en la ruta que nos da el JSON Server o más tarde en la interfaz.
+
+Al ingresar a la ruta que nos da el Live Server se abre el cliente en la página inicial; en esta podremos visualizar distintos elementos, ver algunas tarjetas de productos, filtrar y redirigirnos a la pestaña de productos y desplazarnos a las diferentes rutas de la aplicación.
+
+Podemos dirigirnos a la página de productos; allí por defecto se visualizarán todos los productos existentes en la fake API o si hay algún filtro sólo aparecen los productos que le corresponden.
+
+Cada card de producto contiene las opciones para agregarla a favoritos y para disminuir o aumentar su cantidad, esta información será guardada y puede visualizarse desde el carrito de la barra de navegación.
+
+El carrito de la barra de navegación con un click renderiza los elementos que se han agregado, permite removerlos y muestra las cantidades y totales según los precios. Allí mismo podemos por medio de botones redirigirnos a la ruta del carrito.
+
+En la ruta del carrito encontramos los productos que se habían guardado, con la opción de modificar sus cantidades o removerlos del carrito. También en la parte inferior encontramos una especie de factura que muestra el total de la compra, y dos botones; uno para regresar a la tienda y otro para continuar la compra. Si se continua se abrirá un formulario que de llenarse correctamente guardará la compra en el JSON y vaciará el carrito.
+
+Por medio del ícono del corazón en la barra de navegación podemos acceder a la ruta de favoritos, donde las cartas de los productos agregados se renderizan. Las cartas mantienen sus funcionalidades.
+
+Por último, podemos acceder por medio del ícono de usuario de la barra de navegación a la ruta de administrador. Allí se nos muestran todos los productos existentes, y se nos brinda la posibilidad de modificarlos, eliminarlos y crear productos nuevos por medio de peticiones. También nos es posible visualizar por medio de un botón, las compras hechas hasta el momento.
