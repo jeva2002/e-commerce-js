@@ -62,7 +62,6 @@ const deleteItem = (_id) => {
       updatedList.push(listItems[i]);
   }
   sessionStorage.setItem('cart', JSON.stringify(updatedList));
-  location.reload();
 };
 
 const addFuncionalities = () => {
@@ -75,6 +74,7 @@ const addFuncionalities = () => {
       const id =
         listRemoves[i].parentElement.parentElement.children[0].innerHTML;
       deleteItem(id);
+      location.reload();
     });
   }
 };

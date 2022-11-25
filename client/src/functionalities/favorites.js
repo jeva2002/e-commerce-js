@@ -2,33 +2,40 @@ import { giveFuncionalities, showCards } from './card.js';
 import { insertCommon, links } from './common.js';
 import { getProducts } from './request.js';
 
-insertCommon();
-links();
+const container = document.querySelector('.card-container');
 
-const listFavorites = localStorage.getItem('favorites')
-  ? JSON.parse(localStorage.getItem('favorites'))
-  : null;
-
-if (listFavorites.length) {
-  try {
-    if (listFavorites === 0) showCards(await getProducts(listFavorites));
-    else {
-      for (let i = 0; i < listFavorites.length; i++) {
-        showCards(await getProducts(listFavorites[i]));
+const showFavorites = async () => {
+  const listFavorites = localStorage.getItem('favorites')
+    ? JSON.parse(localStorage.getItem('favorites'))
+    : null;
+  if (listFavorites.length) {
+    try {
+      if (listFavorites === 0) showCards(await getProducts(listFavorites));
+      else {
+        for (let i = 0; i < listFavorites.length; i++) {
+          showCards(await getProducts(listFavorites[i]));
+        }
+        giveFuncionalities();
       }
-      giveFuncionalities();
+    } catch (error) {
+      console.error(error);
     }
-  } catch (error) {
-    console.error(error);
+  } else {
+    container.innerHTML = '<h1 id="error">No hay favoritos :c</h1>';
   }
-} else {
-  const container = document.querySelector('.card-container');
-  container.innerHTML = '<h1 id="error">No hay favoritos :c</h1>';
+};
+
+try {
+  insertCommon();
+  links();
+  await showFavorites();
+} catch (error) {
+  console.log(error);
 }
 
-const favoriteArray = Array.from(document.getElementsByClassName('heart'));
-for (let element in favoriteArray) {
-  favoriteArray[element].addEventListener('click', () => {
-    location.reload();
-  });
-}
+// const favoriteArray = Array.from(document.getElementsByClassName('heart'));
+// for (let element in favoriteArray) {
+//   favoriteArray[element].addEventListener('click', async () => {
+//     await showFavorites();
+//   });
+// }

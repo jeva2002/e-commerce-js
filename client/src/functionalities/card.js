@@ -87,6 +87,13 @@ export const giveFuncionalities = () => {
     favoriteArray[i].addEventListener('click', () => {
       favoriteArray[i].classList.toggle('favorite');
       modifyFavorites(id);
+      if (
+        location.href === 'http://127.0.0.1:5500/src/components/favorites.html'
+      ) {
+        document
+          .querySelector('.card-container')
+          .removeChild(favoriteArray[i].parentNode);
+      }
     });
     isFavorite(id, favoriteArray[i]);
   }

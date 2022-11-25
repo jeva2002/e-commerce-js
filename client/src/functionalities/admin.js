@@ -30,7 +30,7 @@ const addFuncionalities = (_cards) => {
   for (let i = 0; i < cards.length; i++) {
     cards[i].children[2].addEventListener('click', () => {
       deleteProduct(cards[i].children[1].children[0].innerHTML);
-      location.reload();
+      cards[i].parentNode.removeChild(cards[i]);
     });
     cards[i].children[1].children[5].addEventListener('click', () => {
       modifyForm.classList.remove('hidden-modal');
