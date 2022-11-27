@@ -23,3 +23,5 @@ En la ruta del carrito encontramos los productos que se habían guardado, con la
 Por medio del ícono del corazón en la barra de navegación podemos acceder a la ruta de favoritos, donde las cartas de los productos agregados se renderizan. Las cartas mantienen sus funcionalidades.
 
 Por último, podemos acceder por medio del ícono de usuario de la barra de navegación a la ruta de administrador. Allí se nos muestran todos los productos existentes, y se nos brinda la posibilidad de modificarlos, eliminarlos y crear productos nuevos por medio de peticiones. También nos es posible visualizar por medio de un botón, las compras hechas hasta el momento.
+
+La lista de ciudades fue tomada de https://github.com/marcovega/colombia-json/blob/master/colombia.json
