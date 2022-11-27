@@ -87,3 +87,14 @@ export const createSale = async (_sale) => {
     console.error(error);
   }
 };
+
+export const getLocations = async () => {
+  try {
+    const locations = await (
+      await fetch('http://localhost:3000/locations/1')
+    ).json();
+    return locations;
+  } catch (e) {
+    console.error(e);
+  }
+};

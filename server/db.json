@@ -241,17 +241,42 @@
       "img": "https://img.thrfun.com/img/096/521/mustard_greens_x2.jpg"
     }
   ],
-  "admin": [
-    {
-      "user": "Juanito",
-      "password": "contraseña123"
-    }
-  ],
   "sales": [
     {
-      "name": "Juanito",
-      "address": "juanito@yahoo.xs",
-      "phone": "12345",
+      "name": "Juan Esteban",
+      "address": "calle 1 ",
+      "location": "Antioquia, Anorí",
+      "phone": "1315135",
+      "products": [
+        {
+          "id": "1",
+          "amount": "3"
+        },
+        {
+          "id": "3",
+          "amount": "3"
+        },
+        {
+          "id": "4",
+          "amount": "1"
+        },
+        {
+          "id": "5",
+          "amount": "2"
+        },
+        {
+          "id": "6",
+          "amount": "1"
+        }
+      ],
+      "total": "237.54",
+      "id": 1
+    },
+    {
+      "name": "Majito",
+      "address": "calle 2",
+      "location": "Antioquia, Barbosa",
+      "phone": "5416565",
       "products": [
         {
           "id": "1",
@@ -259,40 +284,144 @@
         },
         {
           "id": "3",
-          "amount": "2"
-        },
-        {
-          "id": "4",
           "amount": "1"
         }
       ],
-      "total": "123.32",
-      "id": 1
-    },
-    {
-      "name": "Juan Esteban",
-      "address": "adsasd@asdsad",
-      "phone": "1312213213",
-      "products": [
-        {
-          "id": "1",
-          "amount": "3"
-        },
-        {
-          "id": "2",
-          "amount": "1"
-        },
-        {
-          "id": "5",
-          "amount": "1"
-        },
-        {
-          "id": "6",
-          "amount": "1"
-        }
-      ],
-      "total": "160.84",
+      "total": "68.29",
       "id": 2
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "departamento": "Antioquia",
+      "ciudades": [
+        "Abejorral",
+        "Abriaquí",
+        "Alejandría",
+        "Amagá",
+        "Amalfi",
+        "Andes",
+        "Angelópolis",
+        "Angostura",
+        "Anorí",
+        "Anzá",
+        "Apartadó",
+        "Arboletes",
+        "Argelia",
+        "Armenia",
+        "Barbosa",
+        "Bello",
+        "Belmira",
+        "Betania",
+        "Betulia",
+        "Briceño",
+        "Buriticá",
+        "Cáceres",
+        "Caicedo",
+        "Caldas",
+        "Campamento",
+        "Cañasgordas",
+        "Caracolí",
+        "Caramanta",
+        "Carepa",
+        "Carolina del Príncipe",
+        "Caucasia",
+        "Chigorodó",
+        "Cisneros",
+        "Ciudad Bolívar",
+        "Cocorná",
+        "Concepción",
+        "Concordia",
+        "Copacabana",
+        "Dabeiba",
+        "Donmatías",
+        "Ebéjico",
+        "El Bagre",
+        "El Carmen de Viboral",
+        "El Peñol",
+        "El Retiro",
+        "El Santuario",
+        "Entrerríos",
+        "Envigado",
+        "Fredonia",
+        "Frontino",
+        "Giraldo",
+        "Girardota",
+        "Gómez Plata",
+        "Granada",
+        "Guadalupe",
+        "Guarne",
+        "Guatapé",
+        "Heliconia",
+        "Hispania",
+        "Itagüí",
+        "Ituango",
+        "Jardín",
+        "Jericó",
+        "La Ceja",
+        "La Estrella",
+        "La Pintada",
+        "La Unión",
+        "Liborina",
+        "Maceo",
+        "Marinilla",
+        "Medellín",
+        "Montebello",
+        "Murindó",
+        "Mutatá",
+        "Nariño",
+        "Nechí",
+        "Necoclí",
+        "Olaya",
+        "Peque",
+        "Pueblorrico",
+        "Puerto Berrío",
+        "Puerto Nare",
+        "Puerto Triunfo",
+        "Remedios",
+        "Rionegro",
+        "Sabanalarga",
+        "Sabaneta",
+        "Salgar",
+        "San Andrés de Cuerquia",
+        "San Carlos",
+        "San Francisco",
+        "San Jerónimo",
+        "San José de la Montaña",
+        "San Juan de Urabá",
+        "San Luis",
+        "San Pedro de Urabá",
+        "San Pedro de los Milagros",
+        "San Rafael",
+        "San Roque",
+        "San Vicente",
+        "Santa Bárbara",
+        "Santa Fe de Antioquia",
+        "Santa Rosa de Osos",
+        "Santo Domingo",
+        "Segovia",
+        "Sonsón",
+        "Sopetrán",
+        "Támesis",
+        "Tarazá",
+        "Tarso",
+        "Titiribí",
+        "Toledo",
+        "Turbo",
+        "Uramita",
+        "Urrao",
+        "Valdivia",
+        "Valparaíso",
+        "Vegachí",
+        "Venecia",
+        "Vigía del Fuerte",
+        "Yalí",
+        "Yarumal",
+        "Yolombó",
+        "Yondó",
+        "Zaragoza"
+      ]
     }
   ]
 }

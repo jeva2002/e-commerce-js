@@ -194,9 +194,13 @@ document
           if (parseInt(products[i].amount) !== 0)
             listProducts.push(products[i]);
         }
+        const locationUser = localStorage.getItem('location')
+          ? JSON.parse(localStorage.getItem('location'))
+          : '';
         const data = {
           name: e.target.name.value,
           address: e.target.address.value,
+          location: locationUser,
           phone: e.target.phone.value,
           products: listProducts,
           total: total,

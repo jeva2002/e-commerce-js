@@ -228,6 +228,58 @@ nav {
   cursor: pointer;
 }
 
+#location-modal {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  height: 400px;
+  width: 400px;
+  background-color: #fff;
+  box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.57);
+  border-radius: 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  margin: auto;
+  gap: 10px;
+}
+
+#location-modal select, #location-modal input {
+  border: none;
+  background-color: #efefef;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+#location-modal select {
+  padding-left: 20px;
+}
+
+#location-modal input {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #f2913d;
+  cursor: pointer;
+}
+
+#location-modal img {
+  width: 30px;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  cursor: pointer;
+}
+
+option {
+  color: #000;
+}
+
 @media screen and (max-width: 1130px) {
   .main-nav form {
     margin-left: 4vw;
@@ -258,6 +310,10 @@ nav {
 
   .links {
     margin: 1vw;
+  }
+
+  #location-modal {
+    left: 20vw;
   }
 }
 
@@ -340,6 +396,11 @@ nav {
 
   #search {
     width: 60vw;
+  }
+
+  #location-modal {
+    left: 5vw;
+    width: 320px;
   }
 
   .hidden * {

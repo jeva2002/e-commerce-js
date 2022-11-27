@@ -1,6 +1,8 @@
 import { footerComponent } from '../components/footer.js';
 import { headerComponent } from '../components/header.js';
+import { selectLocation } from '../components/locations-modal.js';
 import { acummulatedTotal, deleteItem, showItems } from './cart-nav.js';
+import { getLocations } from './request.js';
 
 export const URL_SERVER = 'http://localhost:3000/';
 
@@ -110,6 +112,37 @@ export const insertCommon = (_isIndex) => {
 
   document.getElementById('main-title').addEventListener('click', () => {
     window.location.href = `http://${window.location.host}/index.html`;
+  });
+
+  document.getElementById('location').addEventListener('click', async (e) => {
+    e.preventDefault();
+    const ciudades = (await getLocations()).ciudades;
+    document.body.appendChild(selectLocation(_isIndex, ciudades));
+    document.getElementById('close-modal').addEventListener('click', () => {
+      document
+        .getElementById('location-modal')
+        .parentNode.removeChild(document.getElementById('location-modal'));
+    });
+    document
+      .getElementById('location-modal')
+      .addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (e.target.department.value) {
+          if (e.target.municipality.value) {
+            localStorage.setItem(
+              'location',
+              JSON.stringify(
+                e.target.department.value + ', ' + e.target.municipality.value
+              )
+            );
+            document
+              .getElementById('location-modal')
+              .parentNode.removeChild(
+                document.getElementById('location-modal')
+              );
+          }
+        }
+      });
   });
 
   document.defaultView.addEventListener('resize', () => {

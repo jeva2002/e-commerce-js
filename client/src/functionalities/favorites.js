@@ -32,10 +32,3 @@ try {
 } catch (error) {
   console.log(error);
 }
-
-// const favoriteArray = Array.from(document.getElementsByClassName('heart'));
-// for (let element in favoriteArray) {
-//   favoriteArray[element].addEventListener('click', async () => {
-//     await showFavorites();
-//   });
-// }
